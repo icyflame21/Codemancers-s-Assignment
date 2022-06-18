@@ -7,7 +7,7 @@ export function UserInput() {
   const [toggleGifBox, setToggleGifBox] = useState(false);
   const [selectedGifShow, setSelectedGifShow] = useState();
   const [writtenPost, setWrittenPost] = useState("");
-  const[container,setContainer]=useState(false);
+  const [container, setContainer] = useState(false);
   const [posts, setPosts] = useState([]);
 
   const toggleGifSearchBox = () => {
@@ -38,7 +38,7 @@ export function UserInput() {
     } else if (!selectedGifShow) {
       alert("select a gif");
     }
-    setContainer(true)
+    setContainer(true);
   };
 
   return (
@@ -89,8 +89,14 @@ export function UserInput() {
                         <p>Biswaranjan</p>
                         <p>{`${post.date.getDate()} ${post.date.toLocaleString(
                           "en-us",
-                          { month: "long" }
-                        )} at ${post.date.getHours()}:${post.date.getMinutes()}`}</p>
+                          {
+                            month: "long",
+                          }
+                        )} at ${post.date.toLocaleString("en-US", {
+                          hour: "2-digit",
+                          minute: "2-digit",
+                          hour12: true,
+                        })}`}</p>
                       </div>
                       <div className={style.post_area}>
                         <p>{post.text}</p>
