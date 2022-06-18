@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import user from "./Assets/Github.jpeg";
-import style from "./UserInput.module.css";
+import style from "./styles/UserInput.module.css";
 import { GifSearchBox } from "./GifSearchBox";
 
 export function UserInput() {

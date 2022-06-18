@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import style from "./GifSearchBox.module.css";
+import style from "./styles/GifSearchBox.module.css";
 
 export function GifSearchBox({ selectedElem }) {
   const [search, setSearch] = useState("trending");
