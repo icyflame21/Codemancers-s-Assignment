@@ -1,18 +1,20 @@
-Codemancers_Assignment
+# Codemancers_Assignment
 Facebook UI on post looks like with gif search functionality using GIPHY API.
 
 ## Demo 🎥
 Deployed Link:- Enjoy the Experience
 
 ## How to get Started 🚀
+```
 > git clone https://github.com/icyflame21/Codemancers-s-Assignment.git
 > cd Codemancers-s-Assignment
 > npm install
 > npm start
+```
 
 ## Tech Stack 💻
-React
-GIPHY API
+- React
+- GIPHY API
 
 ## Snap Shots 📷
 - Landing Page
