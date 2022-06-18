@@ -4,11 +4,10 @@ import style from "./styles/GifSearchBox.module.css";
 export function GifSearchBox({ selectedElem }) {
   const [search, setSearch] = useState("trending");
   const [gifs, setGifs] = useState();
-  const [isLoading, setisLoading] = useState(false);
+
 
   const api_key = "oHLQO6VS4J3xjN5nnhxEqewtaQUj36KR";
   useEffect(() => {
-    setisLoading(true);
     fetch(
       `https://api.giphy.com/v1/gifs/search?api_key=${api_key}&q=${search}&limit=20`
     )
