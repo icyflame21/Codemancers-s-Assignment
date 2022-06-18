@@ -17,6 +17,7 @@ Deployed Link:- Enjoy the Experience
 - GIPHY API
 
 ## Snap Shots 📷
+
 **Landing Page**
 ![Landing Page](https://images2.imgbox.com/04/5b/qBMUsYbe_o.jpg)
 
