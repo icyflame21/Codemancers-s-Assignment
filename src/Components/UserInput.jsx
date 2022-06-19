@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import user from "./Assets/Github.jpeg";
-import style from "./styles/UserInput.module.css";
+import style from "./Styles/UserInput.module.css";
 import { GifSearchBox } from "./GifSearchBox";
 
 export function UserInput() {
@@ -22,15 +22,17 @@ export function UserInput() {
   const handlePosts = () => {
     if (writtenPost !== "" && selectedGifShow) {
       setPosts([
-        ...posts,
+        
         {
           date: new Date(),
           text: writtenPost,
-          image: selectedGifShow.images.downsized.url,
+          image: selectedGifShow.images.downsized.url
         },
+        ...posts
       ]);
       setSelectedGifShow();
       setWrittenPost("");
+      setContainer(true);
     } else if (writtenPost === "" && !selectedGifShow) {
       alert("write something in post and select a gif");
     } else if (writtenPost === "") {
@@ -38,7 +40,6 @@ export function UserInput() {
     } else if (!selectedGifShow) {
       alert("select a gif");
     }
-    setContainer(true);
   };
 
   return (
@@ -86,21 +87,23 @@ export function UserInput() {
                     <div className={style.posts} key={post.image}>
                       <div className={style.nav}>
                         <img src={user} alt="user_img" />
-                        <p>Biswaranjan</p>
-                        <p>{`${post.date.getDate()} ${post.date.toLocaleString(
-                          "en-us",
-                          {
-                            month: "long",
-                          }
-                        )} at ${post.date.toLocaleString("en-US", {
-                          hour: "2-digit",
-                          minute: "2-digit",
-                          hour12: true,
-                        })}`}</p>
+                        <div className={style.nav1}>
+                          <p>Biswaranjan</p>
+                          <p>{`${post.date.getDate()} ${post.date.toLocaleString(
+                            "en-us",
+                            {
+                              month: "long"
+                            }
+                          )} at ${post.date.toLocaleString("en-US", {
+                            hour: "2-digit",
+                            minute: "2-digit",
+                            hour12: true
+                          })}`}</p>
+                        </div>
                       </div>
                       <div className={style.post_area}>
                         <p>{post.text}</p>
-                        <img src={post.image} />
+                        <img src={post.image} alt="Gif" />
                       </div>
                       <div className={style.buttons}>
                         <button>Like</button>
